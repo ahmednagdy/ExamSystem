@@ -33,14 +33,6 @@ namespace ExamSystem.Entities
         public virtual DbSet<Topic> Topics { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["Examdb"].ConnectionString);
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Arabic_CI_AS");
@@ -314,6 +306,14 @@ namespace ExamSystem.Entities
             });
 
             OnModelCreatingPartial(modelBuilder);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["Examdb"].ConnectionString);
+            }
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

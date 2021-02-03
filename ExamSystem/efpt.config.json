@@ -3,7 +3,7 @@
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
    "FilterSchemas": false,
-   "IncludeConnectionString": true,
+   "IncludeConnectionString": false,
    "ModelNamespace": null,
    "OutputContextPath": null,
    "OutputPath": "Entities",
@@ -141,6 +141,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[Log_In]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[QuestionDelete]",
          "ObjectType": 1
       },
@@ -206,6 +210,10 @@
       },
       {
          "Name": "[dbo].[SelectTopic]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[SetNQuestions]",
          "ObjectType": 1
       },
       {

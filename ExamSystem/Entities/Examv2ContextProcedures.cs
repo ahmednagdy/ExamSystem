@@ -796,6 +796,56 @@ namespace ExamSystem.Entities
             return _;
         }
 
+        public async Task<Log_InResult[]> Log_InAsync(string usernamr, string password, OutputParameter<bool?> flag, OutputParameter<int?> CurrentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterflag = new SqlParameter
+            {
+                ParameterName = "flag",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Bit,
+            };
+            var parameterCurrentID = new SqlParameter
+            {
+                ParameterName = "CurrentID",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                parameterflag,
+                parameterCurrentID,
+                new SqlParameter
+                {
+                    ParameterName = "usernamr",
+                    Size = 100,
+                    Value = usernamr ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "password",
+                    Size = 200,
+                    Value = password ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<Log_InResult>("EXEC @returnValue = [dbo].[Log_In] @flag OUTPUT, @CurrentID OUTPUT, @usernamr, @password", sqlParameters, cancellationToken);
+
+            flag.SetValue(parameterflag.Value);
+            CurrentID.SetValue(parameterCurrentID.Value);
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public async Task<int> QuestionDeleteAsync(int? qID, OutputParameter<bool?> flag, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterflag = new SqlParameter
@@ -1348,6 +1398,58 @@ namespace ExamSystem.Entities
             };
             var _ = await _context.SqlQueryAsync<SelectTopicResult>("EXEC @returnValue = [dbo].[SelectTopic]", sqlParameters, cancellationToken);
 
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public async Task<int> SetNQuestionsAsync(int? currentUser, int? crsID, int? NMCQ, int? NTF, OutputParameter<bool?> flag, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterflag = new SqlParameter
+            {
+                ParameterName = "flag",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Bit,
+            };
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "currentUser",
+                    Value = currentUser ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "crsID",
+                    Value = crsID ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "NMCQ",
+                    Value = NMCQ ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "NTF",
+                    Value = NTF ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterflag,
+                parameterreturnValue,
+            };
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[SetNQuestions] @currentUser, @crsID, @NMCQ, @NTF, @flag OUTPUT", sqlParameters, cancellationToken);
+
+            flag.SetValue(parameterflag.Value);
             returnValue?.SetValue(parameterreturnValue.Value);
 
             return _;
