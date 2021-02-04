@@ -34,7 +34,7 @@ namespace ExamSystem
             this.Controls.Add(report);
             report.Refresh();
         }
-        frmMain frmMain = new frmMain();
+        frmInsertQuestions frmMain = new frmInsertQuestions();
         private void button1_Click(object sender, EventArgs e)
         {
             frmMain.Show();

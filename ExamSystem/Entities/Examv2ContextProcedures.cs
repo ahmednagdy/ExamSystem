@@ -52,7 +52,7 @@ namespace ExamSystem.Entities
             return _;
         }
 
-        public async Task<int> ChoiceInsertAsync(int? qId, string cBody, OutputParameter<bool?> flag, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public async Task<int> ChoiceInsertAsync(int? qId, string choiceBody, OutputParameter<bool?> flag, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterflag = new SqlParameter
             {
@@ -67,7 +67,7 @@ namespace ExamSystem.Entities
                 SqlDbType = System.Data.SqlDbType.Int,
             };
 
-            var sqlParameters = new []
+            var sqlParameters = new[]
             {
                 parameterflag,
                 new SqlParameter
@@ -78,14 +78,14 @@ namespace ExamSystem.Entities
                 },
                 new SqlParameter
                 {
-                    ParameterName = "cBody",
+                    ParameterName = "choiceBody",
                     Size = 100,
-                    Value = cBody ?? Convert.DBNull,
+                    Value = choiceBody ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.VarChar,
                 },
                 parameterreturnValue,
             };
-            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[ChoiceInsert] @flag OUTPUT, @qId, @cBody", sqlParameters, cancellationToken);
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[ChoiceInsert] @flag OUTPUT, @qId, @choiceBody", sqlParameters, cancellationToken);
 
             flag.SetValue(parameterflag.Value);
             returnValue?.SetValue(parameterreturnValue.Value);
@@ -880,7 +880,7 @@ namespace ExamSystem.Entities
             return _;
         }
 
-        public async Task<int> QuestionInsertAsync(string qBody, string modelAnswer, int? grade, int? type, int? courseID, OutputParameter<bool?> flag, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public async Task<int> QuestionInsertAsync(string qBody, int? modelAnswer, int? grade, int? type, int? courseID, OutputParameter<bool?> flag, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterflag = new SqlParameter
             {
@@ -908,9 +908,8 @@ namespace ExamSystem.Entities
                 new SqlParameter
                 {
                     ParameterName = "modelAnswer",
-                    Size = 50,
                     Value = modelAnswer ?? Convert.DBNull,
-                    SqlDbType = System.Data.SqlDbType.VarChar,
+                    SqlDbType = System.Data.SqlDbType.Int,
                 },
                 new SqlParameter
                 {

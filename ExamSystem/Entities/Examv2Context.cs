@@ -187,7 +187,6 @@ namespace ExamSystem.Entities
 
                 entity.Property(e => e.modelAnswer)
                     .IsRequired()
-                    .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.course)

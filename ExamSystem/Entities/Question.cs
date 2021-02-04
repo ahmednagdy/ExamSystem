@@ -15,7 +15,7 @@ namespace ExamSystem.Entities
 
         public int questionID { get; set; }
         public string body { get; set; }
-        public string modelAnswer { get; set; }
+        public int modelAnswer { get; set; }
         public int grade { get; set; }
         public int type { get; set; }
         public int? courseID { get; set; }
