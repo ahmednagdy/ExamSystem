@@ -14,7 +14,7 @@ namespace ExamSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInsertQuestions());
+            Application.Run(new frmReport());
         }
     }
 }
