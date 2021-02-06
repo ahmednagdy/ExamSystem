@@ -1299,17 +1299,37 @@
 				</History>
 			</Object>
 			<Object Name="dbo.QuestionInsert" Created="2021-02-06T17:03:51" CommentModified="2021-02-06T17:03:51" CommentModifiedBy="">
+				<Comment>SP Inserts questions in the question table.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@courseID" sortOrder="6" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@grade" sortOrder="4" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@modelAnswer" sortOrder="3" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@qBody" sortOrder="2" type="varchar" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@type" sortOrder="5" type="int" />
+					<Attribute commentModified="06/02/2021 09:28:50 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@courseID" sortOrder="6" type="int">
+						<Comment>Course ID.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:28:39 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:28:50 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@grade" sortOrder="4" type="int">
+						<Comment>Question Grade.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:28:39 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@modelAnswer" sortOrder="3" type="int">
+						<Comment>Model Answer.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:28:39 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@qBody" sortOrder="2" type="varchar">
+						<Comment>Question Body.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:28:50 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@type" sortOrder="5" type="int">
+						<Comment>Type (TF or MCQ).</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:51" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded 6 attributes" />
+					<Record When="2021-02-06T21:27:22" Who="ahmed" Description="Changed object comment" />
+					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@courseID comment changed" />
+					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@grade comment changed" />
+					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@modelAnswer comment changed" />
+					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@qBody comment changed" />
+					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@type comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.QuestionSelect" Created="2021-02-06T17:03:52" CommentModified="2021-02-06T17:03:52" CommentModifiedBy="">
