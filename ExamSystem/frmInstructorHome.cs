@@ -31,6 +31,9 @@ namespace ExamSystem
         private void button5_Click(object sender, EventArgs e)
         {
 
+            frmReport fr = new frmReport();
+            fr.SetReportParameters(2, (int) comBoxInstructorName.SelectedValue); ;
+            fr.ShowDialog();
         }
 
         private void frmInstructorHome_Load(object sender, EventArgs e)
@@ -79,16 +82,29 @@ namespace ExamSystem
             cbmStudentName.ValueMember = "StudentId";
             //==================///=
             BindingSource ExamID = new BindingSource();
+            var Exam = db.Exam.ToList();
+            var Course = db.Course.ToList();
+            var InstructorCourse = db.InstructorCourse.ToList();
             var examid = db.Exam.ToList();
-            ExamID.DataSource = examid;
+            var q = (from ex in Exam
+                     join c in Course
+                     on ex.CourseId equals c.CourseId
+                     join ic in InstructorCourse
+                     on c.CourseId equals ic.CourseId
+                     where ic.InsId == LoginInstructor.InsId
+                     select ex.ExamId).ToList();
+            ExamID.DataSource = q;
             combxExamID.DataSource = ExamID;
             combxExamID.DisplayMember = "ExamId";
-            //combxExamID.ValueMember = "ExamId";
 
-         
+            /*
+           select e.examID
+           from  Exam e, Course c , InstructorCourse ic
+           where ic.InsID = 2 and c.courseID = e.courseID and c.courseID = ic.courseID
+             */
 
             /////////////////////////////////
-            
+
         }
 
         private async void button2_Click(object sender, EventArgs e)
@@ -116,6 +132,9 @@ namespace ExamSystem
         {
 
             int crsID = (int)combBoxCourseName.SelectedValue;
+            frmReport fr = new frmReport();
+            fr.SetReportParameters(3,crsID);
+            fr.ShowDialog();
             //call report here and pass course id to its ctor
         }
 
@@ -132,6 +151,7 @@ namespace ExamSystem
             int studId = (int)cbmStudentName.SelectedValue;
             frmReport frmReport = new frmReport();
             frmReport.SetReportParameters(1, studId);
+            frmReport.ShowDialog();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -167,6 +187,13 @@ namespace ExamSystem
         private void label9_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void QestionsAndAnswersinExam_Click(object sender, EventArgs e)
+        {
+            frmReport frmReport = new frmReport();
+            frmReport.SetReportParameters(5, (int)combxExamID.SelectedItem);
+            frmReport.ShowDialog();
         }
     }
 }

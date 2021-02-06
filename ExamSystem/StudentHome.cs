@@ -91,6 +91,9 @@ namespace ExamSystem
 
                      }).ToList();
             var param = q[0].sa.ExamId;
+            frmReport fr = new frmReport();
+            fr.SetReportParameters(5, param);
+            fr.ShowDialog();
         }
     }
 }

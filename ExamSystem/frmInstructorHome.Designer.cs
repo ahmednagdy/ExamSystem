@@ -46,6 +46,8 @@ namespace ExamSystem
             this.btnInsertQuestion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace ExamSystem
             this.exam1 = new System.Windows.Forms.ComboBox();
             this.studentExam = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,7 +144,7 @@ namespace ExamSystem
             this.button5.Location = new System.Drawing.Point(247, 224);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 28);
+            this.button5.Size = new System.Drawing.Size(115, 37);
             this.button5.TabIndex = 5;
             this.button5.Text = "Generate";
             this.button5.UseVisualStyleBackColor = false;
@@ -220,6 +220,7 @@ namespace ExamSystem
             this.QestionsAndAnswersinExam.TabIndex = 16;
             this.QestionsAndAnswersinExam.Text = "Generate";
             this.QestionsAndAnswersinExam.UseVisualStyleBackColor = false;
+            this.QestionsAndAnswersinExam.Click += new System.EventHandler(this.QestionsAndAnswersinExam_Click);
             // 
             // crname
             // 
@@ -269,6 +270,30 @@ namespace ExamSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1011, 38);
             this.panel1.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(949, -11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 28);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "_";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(975, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 28);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "X";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label2
             // 
@@ -374,30 +399,6 @@ namespace ExamSystem
             this.label8.Size = new System.Drawing.Size(189, 20);
             this.label8.TabIndex = 28;
             this.label8.Text = "Questions Of Student Exam";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(975, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 28);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "X";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(949, -11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 28);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "_";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // frmInstructorHome
             // 

@@ -36,7 +36,7 @@ namespace ExamSystem
         {
             ReportDataSource src = new ReportDataSource();
             report = new ReportViewer();
-            SetReportParameters(5, 116);
+            //SetReportParameters(5, 115);
             switch (reportIndex)
             {
                 case 0:
