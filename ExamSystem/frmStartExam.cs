@@ -86,6 +86,8 @@ namespace ExamSystem
                 rdioanswer1.Text = questionsList[ExamQuestion.Position].Choice[0].choiceBody;
                 rdioanswer1.Checked = true;
                 rdioanswer2.Text = questionsList[ExamQuestion.Position].Choice[1].choiceBody;
+                rdioanswer3.Show();
+                rdioanswer4.Show();
                 rdioanswer3.Text = questionsList[ExamQuestion.Position].Choice[2].choiceBody;
                 rdioanswer4.Text = questionsList[ExamQuestion.Position].Choice[3].choiceBody;
                 //rdioanswer1.DataBindings.Add("Text", questionsList[ExamQuestion.Position].Choice[0], "choiceBody");
@@ -99,10 +101,10 @@ namespace ExamSystem
             {
                 rdioanswer1.Text = "True";
                 rdioanswer2.Text = "False";
-               
+                rdioanswer3.Hide();
+                rdioanswer4.Hide();
                 this.Controls.Add(Navigator);
             }
-            //}
 
         }
 
@@ -142,7 +144,6 @@ namespace ExamSystem
                 {
                     userAnswers += questionsList[ExamQuestion.Position].Choice.FirstOrDefault(c => c.choiceBody == rdioanswer1.Text).choiceID + ",";
                 }
-                
             }
             else if (rdioanswer2.Checked == true)
             {
@@ -173,29 +174,33 @@ namespace ExamSystem
                     rdioanswer1.Text = questionsList[ExamQuestion.Position].Choice[0].choiceBody;
                     rdioanswer1.Checked = true;
                     rdioanswer2.Text = questionsList[ExamQuestion.Position].Choice[1].choiceBody;
+                    rdioanswer3.Show();
+                    rdioanswer4.Show();
                     rdioanswer3.Text = questionsList[ExamQuestion.Position].Choice[2].choiceBody;
                     rdioanswer4.Text = questionsList[ExamQuestion.Position].Choice[3].choiceBody;
                 }
                 else if (questionsList[ExamQuestion.Position].Type == 0)
                 {
+                    rdioanswer3.Hide();
+                    rdioanswer4.Hide();
                     rdioanswer1.Text = "True";
                     rdioanswer2.Text = "False";
 
                     this.Controls.Add(Navigator);
                 }
-
             }
             else
             {
                 // btnSubmit
                 // 
                 btnNext.Hide();
-                this.btnSubmit.Location = new System.Drawing.Point(48, 418);
                 this.btnSubmit.Name = "btnSubmit";
-                this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-                this.btnSubmit.TabIndex = 2;
+                //this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+                //this.btnSubmit.TabIndex = 2;
                 this.btnSubmit.Text = "Submit";
                 this.btnSubmit.UseVisualStyleBackColor = true;
+                this.btnSubmit.BackColor = Color.CadetBlue;
+                this.btnSubmit.ForeColor = Color.White;
                 this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
                 // 
             }
@@ -204,7 +209,6 @@ namespace ExamSystem
         private async void timer1_Tick(object sender, EventArgs e)
 
         {
-
             this.Text ="your timer "+ _ticks.ToString();
             if (_ticks <1000)
             {
@@ -225,12 +229,23 @@ namespace ExamSystem
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             _ticks = 1000;
+        }
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

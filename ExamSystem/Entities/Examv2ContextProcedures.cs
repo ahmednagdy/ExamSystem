@@ -52,7 +52,7 @@ namespace ExamSystem.Entities
             return _;
         }
 
-        public async Task<ChoiceInsertResult[]> ChoiceInsertAsync(int? qId, string choiceBody, OutputParameter<bool?> flag, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public async Task<ChoiceInsertResult[]> ChoiceInsertAsync( OutputParameter<bool?> flag,int? qId, string choiceBody, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterflag = new SqlParameter
             {

@@ -60,5 +60,37 @@ namespace ExamSystem
             comboxCourses.DisplayMember = "name";
             comboxCourses.ValueMember = "courseID";
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+
+            var Exam = db.Exam.ToList();
+            var StudentAnswers = db.StudentAnswers.ToList();
+            var Course = db.Course.ToList();
+            var q = (from ex in Exam
+                     join sa in StudentAnswers
+                     on ex.ExamId equals sa.ExamId
+                     where ex.CourseId == (int)comboxCourses.SelectedValue
+                     where sa.StudentId == LoginStudent.StudentId
+
+
+                     orderby sa.ExamId descending
+                     select new
+                     {
+                        sa
+
+                     }).ToList();
+            var param = q[0].sa.ExamId;
+        }
     }
 }
