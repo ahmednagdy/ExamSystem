@@ -1,11 +1,11 @@
 ﻿{
    "ContextClassName": "Examv2Context",
-   "ContextNamespace": null,
+   "ContextNamespace": "Entities",
    "DefaultDacpacSchema": null,
    "FilterSchemas": false,
-   "IncludeConnectionString": false,
-   "ModelNamespace": null,
-   "OutputContextPath": null,
+   "IncludeConnectionString": true,
+   "ModelNamespace": "Entities",
+   "OutputContextPath": "Entities",
    "OutputPath": "Entities",
    "ProjectRootNamespace": "ExamSystem",
    "Schemas": null,
@@ -42,6 +42,10 @@
       },
       {
          "Name": "[dbo].[Question]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Repo]",
          "ObjectType": 0
       },
       {
@@ -93,11 +97,19 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[DeleteInstructor_Action]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[DeleteStudCourse]",
          "ObjectType": 1
       },
       {
          "Name": "[dbo].[DeleteStudent]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[DeleteStudent_Action]",
          "ObjectType": 1
       },
       {
@@ -113,6 +125,62 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[DeleteUser_Action]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExamAnswers]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExamCorrection]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecDeleteCourse]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecDeleteTopic]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecGenerateExam]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecInsertCourse]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecInsertNQuestions]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecInsertTopic]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecSetNQuestions]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecUpdateCourse]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ExecUpdateTopic]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GenerateExam]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[getLastQuestionID]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[InsertCourse]",
          "ObjectType": 1
       },
@@ -121,11 +189,23 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[InsertInsructor]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[InsertInsructor_Action]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[insertStudCourse]",
          "ObjectType": 1
       },
       {
          "Name": "[dbo].[InsertStudent]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[InsertStudent_Action]",
          "ObjectType": 1
       },
       {
@@ -141,7 +221,15 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[InsertUser_Action]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[Log_In]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Log_In_Action]",
          "ObjectType": 1
       },
       {
@@ -197,6 +285,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[SelectInstructor_Action]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[selectStudCouse]",
          "ObjectType": 1
       },
@@ -205,7 +297,15 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[SelectStudent_Action]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[selectStudentAnswer]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[selectStudentCourse]",
          "ObjectType": 1
       },
       {
@@ -214,6 +314,34 @@
       },
       {
          "Name": "[dbo].[SetNQuestions]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_alterdiagram]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_creatediagram]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_dropdiagram]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_helpdiagramdefinition]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_helpdiagrams]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_renamediagram]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_upgraddiagrams]",
          "ObjectType": 1
       },
       {
@@ -229,11 +357,19 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[UpdateInstructor_Action]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[updateStudCourse]",
          "ObjectType": 1
       },
       {
          "Name": "[dbo].[UpdateStudent]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateStudent_Action]",
          "ObjectType": 1
       },
       {
@@ -247,14 +383,18 @@
       {
          "Name": "[dbo].[UpdateUser]",
          "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateUser_Action]",
+         "ObjectType": 1
       }
    ],
    "UseBoolPropertiesWithoutDefaultSql": false,
-   "UseDatabaseNames": true,
+   "UseDatabaseNames": false,
    "UseDbContextSplitting": false,
-   "UseFluentApiOnly": true,
+   "UseFluentApiOnly": false,
    "UseHandleBars": false,
-   "UseInflector": true,
+   "UseInflector": false,
    "UseLegacyPluralizer": false,
    "UseNodaTime": false,
    "UseSpatial": false

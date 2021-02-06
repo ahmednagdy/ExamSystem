@@ -27,6 +27,7 @@ namespace ExamSystem
         int reportIndex = -1;
         int firstParameter = -1;
         int secondParameter = -1;
+
         public void SetReportParameters(int _reportIndex, int _firstParameter, int _secondParameter = -1)
         {
             reportIndex = _reportIndex;
@@ -36,6 +37,7 @@ namespace ExamSystem
         private async void frmReport_Load(object sender, EventArgs e)
         {
             ReportDataSource src = new ReportDataSource();
+            report = new ReportViewer();
             switch (reportIndex)
             {
                 case 0:
@@ -72,7 +74,7 @@ namespace ExamSystem
                     break;
             }
 
-            report = new ReportViewer();
+            
             report.Dock = DockStyle.Fill;
             report.LocalReport.DataSources.Clear();
             report.LocalReport.DataSources.Add(src);

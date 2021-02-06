@@ -7,5 +7,7 @@ namespace ExamSystem.Entities
 {
     public partial class ChoiceInsertResult
     {
+        //public int Col0 { get; set; }
+        //public string Col1 { get; set; }
     }
 }
