@@ -1324,70 +1324,118 @@
 					<Record When="2021-02-06T17:03:51" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded 6 attributes" />
 					<Record When="2021-02-06T21:27:22" Who="ahmed" Description="Changed object comment" />
-					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@courseID comment changed" />
-					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@flag comment changed" />
-					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@grade comment changed" />
-					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@modelAnswer comment changed" />
-					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@qBody comment changed" />
-					<Record When="2021-02-06T21:28:50" Who="ahmed" Description="@type comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@courseID comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@grade comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@modelAnswer comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@qBody comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@type comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.QuestionSelect" Created="2021-02-06T17:03:52" CommentModified="2021-02-06T17:03:52" CommentModifiedBy="">
+				<Comment>SP to get all questions from the Question table.</Comment>
 				<Attributes />
 				<History>
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded" />
+					<Record When="2021-02-06T21:38:59" Who="ahmed" Description="Changed object comment" />
 				</History>
 			</Object>
 			<Object Name="dbo.QuestionUpdate" Created="2021-02-06T17:03:52" CommentModified="2021-02-06T17:03:52" CommentModifiedBy="">
+				<Comment>SP to update all fields of the Question table.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@body" sortOrder="4" type="nvarchar" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@courseID" sortOrder="7" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@modelAnswer" sortOrder="5" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@newGrade" sortOrder="3" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@qID" sortOrder="2" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@type" sortOrder="6" type="int" />
+					<Attribute commentModified="06/02/2021 09:41:47 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@body" sortOrder="4" type="nvarchar">
+						<Comment>Question Body.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:42:17 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@courseID" sortOrder="7" type="int">
+						<Comment>Course ID.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:41:47 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:41:47 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@modelAnswer" sortOrder="5" type="int">
+						<Comment>Model Answer.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:41:47 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@newGrade" sortOrder="3" type="int">
+						<Comment>Question Grade.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:41:47 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@qID" sortOrder="2" type="int">
+						<Comment>Question ID.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:41:47 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@type" sortOrder="6" type="int">
+						<Comment>Question Type (TF or MCQ).</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded 7 attributes" />
+					<Record When="2021-02-06T21:40:27" Who="ahmed" Description="Changed object comment" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@body comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@courseID comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@modelAnswer comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@newGrade comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@qID comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@type comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.reportCourseTopics" Created="2021-02-06T17:03:52" CommentModified="2021-02-06T17:03:52" CommentModifiedBy="">
+				<Comment>Reporting SP to get all topics in some course.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@CourseID" sortOrder="1" type="int" />
+					<Attribute commentModified="06/02/2021 09:46:55 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@CourseID" sortOrder="1" type="int">
+						<Comment>CourseID to get its topics.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded 1 attributes" />
+					<Record When="2021-02-06T21:46:55" Who="ahmed" Description="Changed object comment" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@CourseID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.reportExamQuestions" Created="2021-02-06T17:03:52" CommentModified="2021-02-06T17:03:52" CommentModifiedBy="">
+				<Comment>Reporting SP to get all questions in some exam given the Exam ID.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@exId" sortOrder="1" type="int" />
+					<Attribute commentModified="06/02/2021 09:48:56 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@exId" sortOrder="1" type="int">
+						<Comment>Exam ID.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded 1 attributes" />
+					<Record When="2021-02-06T21:48:56" Who="ahmed" Description="Changed object comment" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@exId comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.reportExamStudent" Created="2021-02-06T17:03:52" CommentModified="2021-02-06T17:03:52" CommentModifiedBy="">
+				<Comment>Reporting SP to get All Questions in some exam with the student answers given the Exam ID.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@ExamID" sortOrder="2" type="int" />
-					<Attribute created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@StuID" sortOrder="1" type="int" />
+					<Attribute commentModified="06/02/2021 09:51:56 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@ExamID" sortOrder="2" type="int">
+						<Comment>ExamID.</Comment>
+					</Attribute>
+					<Attribute commentModified="06/02/2021 09:51:56 م" created="2021-02-06T17:03:52" modified="2021-02-06T17:03:52" name="@StuID" sortOrder="1" type="int">
+						<Comment>Student ID.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded 2 attributes" />
+					<Record When="2021-02-06T21:51:56" Who="ahmed" Description="Changed object comment" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@ExamID comment changed" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@StuID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.reportInsCourses" Created="2021-02-06T17:03:52" CommentModified="2021-02-06T17:03:52" CommentModifiedBy="">
+				<Comment>Reporting SP to get all courses that some instructor teaches and the number of students in each course.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@InstructorID" sortOrder="1" type="int" />
+					<Attribute commentModified="06/02/2021 09:54:12 م" created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@InstructorID" sortOrder="1" type="int">
+						<Comment>Instructor ID to get courses for.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:52" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded 1 attributes" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="Changed object comment" />
+					<Record When="2021-02-06T21:54:12" Who="ahmed" Description="@InstructorID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.reportStudentGrades" Created="2021-02-06T17:03:53" CommentModified="2021-02-06T17:03:53" CommentModifiedBy="">
