@@ -1391,37 +1391,57 @@
 				</History>
 			</Object>
 			<Object Name="dbo.reportStudentGrades" Created="2021-02-06T17:03:53" CommentModified="2021-02-06T17:03:53" CommentModifiedBy="">
+				<Comment>Reporting SP to show student courses and his grade in each course.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@studentID" sortOrder="1" type="int" />
+					<Attribute commentModified="2/6/2021 9:51:09 PM" created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@studentID" sortOrder="1" type="int">
+						<Comment>Student ID.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded 1 attributes" />
+					<Record When="2021-02-06T21:51:09" Who="Hoda" Description="Changed object comment" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@studentID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.reportStudentInfo" Created="2021-02-06T17:03:53" CommentModified="2021-02-06T17:03:53" CommentModifiedBy="">
+				<Comment>Reporting SP to return all students in specific department.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@deptID" sortOrder="1" type="int" />
+					<Attribute commentModified="2/6/2021 9:47:00 PM" created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@deptID" sortOrder="1" type="int">
+						<Comment>Department ID.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded 1 attributes" />
+					<Record When="2021-02-06T21:48:17" Who="Hoda" Description="Changed object comment" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@deptID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.SelectCourse" Created="2021-02-06T17:03:53" CommentModified="2021-02-06T17:03:53" CommentModifiedBy="">
+				<Comment>SP to select Course from course table.</Comment>
 				<Attributes />
 				<History>
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded" />
+					<Record When="2021-02-06T21:46:00" Who="Hoda" Description="Changed object comment" />
 				</History>
 			</Object>
 			<Object Name="dbo.selectExam" Created="2021-02-06T17:03:53" CommentModified="2021-02-06T17:03:53" CommentModifiedBy="">
+				<Comment>SP to select exam from exam table.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@examId" sortOrder="2" type="int" />
-					<Attribute created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@flag" sortOrder="1" type="bit" />
+					<Attribute commentModified="2/6/2021 9:45:46 PM" created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@examId" sortOrder="2" type="int">
+						<Comment>Exam ID.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:45:46 PM" created="2021-02-06T17:03:53" modified="2021-02-06T17:03:53" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded 2 attributes" />
+					<Record When="2021-02-06T21:45:46" Who="Hoda" Description="Changed object comment" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@examId comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.SelectInstructor" Created="2021-02-06T17:03:53" CommentModified="2021-02-06T17:03:53" CommentModifiedBy="">
@@ -1438,8 +1458,8 @@
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded 2 attributes" />
 					<Record When="2021-02-06T21:37:26" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@flag comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@InsID comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@InsID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.SelectInstructor_Action" Created="2021-02-06T17:03:53" CommentModified="2021-02-06T17:03:53" CommentModifiedBy="">
@@ -1453,7 +1473,7 @@
 					<Record When="2021-02-06T17:03:53" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded 1 attributes" />
 					<Record When="2021-02-06T21:37:52" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@InsID comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@InsID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.selectStudCouse" Created="2021-02-06T17:03:54" CommentModified="2021-02-06T17:03:54" CommentModifiedBy="">
@@ -1473,9 +1493,9 @@
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded 3 attributes" />
 					<Record When="2021-02-06T21:38:19" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@courseId comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@flag comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@studId comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@courseId comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@studId comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.SelectStudent" Created="2021-02-06T17:03:54" CommentModified="2021-02-06T17:03:54" CommentModifiedBy="">
@@ -1492,8 +1512,8 @@
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded 2 attributes" />
 					<Record When="2021-02-06T21:38:38" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@flag comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@studentID comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@studentID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.SelectStudent_Action" Created="2021-02-06T17:03:54" CommentModified="2021-02-06T17:03:54" CommentModifiedBy="">
@@ -1507,7 +1527,7 @@
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded 1 attributes" />
 					<Record When="2021-02-06T21:39:05" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@studentID comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@studentID comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.selectStudentAnswer" Created="2021-02-06T17:03:54" CommentModified="2021-02-06T17:03:54" CommentModifiedBy="">
@@ -1524,8 +1544,8 @@
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded 2 attributes" />
 					<Record When="2021-02-06T21:39:33" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@flag comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@studentId comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@studentId comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.selectStudentCourse" Created="2021-02-06T17:03:54" CommentModified="2021-02-06T17:03:54" CommentModifiedBy="">
@@ -1542,8 +1562,8 @@
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:54" Who="User" Description="Loaded 2 attributes" />
 					<Record When="2021-02-06T21:39:52" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@flag comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@studId comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@studId comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.SelectTopic" Created="2021-02-06T17:03:54" CommentModified="2021-02-06T17:03:54" CommentModifiedBy="">
@@ -1577,11 +1597,11 @@
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded 5 attributes" />
 					<Record When="2021-02-06T21:41:29" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@crsID comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@currentUser comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@flag comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@NMCQ comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@NTF comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@crsID comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@currentUser comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@NMCQ comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@NTF comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateCourse" Created="2021-02-06T17:03:55" CommentModified="2021-02-06T17:03:55" CommentModifiedBy="">
@@ -1607,11 +1627,11 @@
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded 5 attributes" />
 					<Record When="2021-02-06T21:42:08" Who="Hoda" Description="Changed object comment" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@crsGrade comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@crsID comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@crsName comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@duration comment changed" />
-					<Record When="2021-02-06T21:42:52" Who="Hoda" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@crsGrade comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@crsID comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@crsName comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@duration comment changed" />
+					<Record When="2021-02-06T21:51:15" Who="Hoda" Description="@flag comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.updateExam" Created="2021-02-06T17:03:55" CommentModified="2021-02-06T17:03:55" CommentModifiedBy="">
