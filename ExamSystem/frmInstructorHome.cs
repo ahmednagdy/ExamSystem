@@ -72,8 +72,8 @@ namespace ExamSystem
             comBoxInstructorName.ValueMember = "InsId";
             //==================///=
             BindingSource StudentName = new BindingSource();
-            var studname = db.Student.ToList();
-            StudentName.DataSource = studname;
+            var student = db.Student.ToList();
+            StudentName.DataSource = student;
             cbmStudentName.DataSource = StudentName;
             cbmStudentName.DisplayMember = "name";
             cbmStudentName.ValueMember = "StudentId";
@@ -85,7 +85,10 @@ namespace ExamSystem
             combxExamID.DisplayMember = "ExamId";
             //combxExamID.ValueMember = "ExamId";
 
+         
 
+            /////////////////////////////////
+            
         }
 
         private async void button2_Click(object sender, EventArgs e)
@@ -129,6 +132,41 @@ namespace ExamSystem
             int studId = (int)cbmStudentName.SelectedValue;
             frmReport frmReport = new frmReport();
             frmReport.SetReportParameters(1, studId);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void crname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumOfTF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumOFMcq_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

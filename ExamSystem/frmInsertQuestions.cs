@@ -23,6 +23,7 @@ namespace ExamSystem
         void TrueFalseAction()
         {
             choice1.Hide(); choice2.Hide(); choice3.Hide(); choice4.Hide();
+            label3.Hide(); label4.Hide(); label5.Hide(); label6.Hide();
             modelAnswer.Items.Clear();
             modelAnswer.Items.Add("False");
             modelAnswer.Items.Add("True");
@@ -50,6 +51,7 @@ namespace ExamSystem
             else if (qtype.SelectedIndex == 1) //MCQ
             {
                 choice1.Show(); choice2.Show(); choice3.Show(); choice4.Show();
+                label3.Show(); label4.Show(); label5.Show(); label6.Show();
                 modelAnswer.Items.Clear();
                 modelAnswer.Items.Add("Choice1");
                 modelAnswer.Items.Add("Choice2");
@@ -80,10 +82,10 @@ namespace ExamSystem
                         else
                         {
                             //Insert the choices (auto get last inserted question id (in the SP))
-                            await procs.ChoiceInsertAsync(null, choice1.Text, flag);
-                            await procs.ChoiceInsertAsync(null, choice2.Text, flag);
-                            await procs.ChoiceInsertAsync(null, choice3.Text, flag);
-                            await procs.ChoiceInsertAsync(null, choice4.Text, flag);
+                            await procs.ChoiceInsertAsync(flag,null, choice1.Text);
+                            await procs.ChoiceInsertAsync(flag,null, choice2.Text);
+                            await procs.ChoiceInsertAsync(flag,null, choice3.Text);
+                            await procs.ChoiceInsertAsync(flag,null, choice4.Text);
 
                             if ((bool)flag.Value) MessageBox.Show("Successfully Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
@@ -92,6 +94,31 @@ namespace ExamSystem
                     }
                 }
             }
+        }
+
+        private void choice2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void qtype_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
