@@ -1526,139 +1526,327 @@
 				</History>
 			</Object>
 			<Object Name="dbo.updateExam" Created="2021-02-06T17:03:55" CommentModified="2021-02-06T17:03:55" CommentModifiedBy="">
+				<Comment>SP that takes Exam id and course id to update Exam in specific course  in datebase.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@courseId" sortOrder="3" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@examId" sortOrder="2" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@flag" sortOrder="1" type="bit" />
+					<Attribute commentModified="2/6/2021 9:44:43 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@courseId" sortOrder="3" type="int">
+						<Comment>Course is.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:44:43 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@examId" sortOrder="2" type="int">
+						<Comment>Exam ID.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:42:46 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded 3 attributes" />
+					<Record When="2021-02-06T21:44:43" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@courseId comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@examId comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@flag comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateInstructor" Created="2021-02-06T17:03:55" CommentModified="2021-02-06T17:03:55" CommentModifiedBy="">
+				<Comment>SP to update instructor information in datebase.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@degree" sortOrder="4" type="varchar" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@deptID" sortOrder="7" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@InsID" sortOrder="2" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@name" sortOrder="3" type="varchar" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@password" sortOrder="8" type="varchar" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@salary" sortOrder="5" type="float" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@userID" sortOrder="6" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@username" sortOrder="9" type="varchar" />
+					<Attribute commentModified="2/6/2021 9:48:31 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@degree" sortOrder="4" type="varchar">
+						<Comment>Instructor  Degree.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:48:31 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@deptID" sortOrder="7" type="int">
+						<Comment>Department id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:40:18 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:48:31 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@InsID" sortOrder="2" type="int">
+						<Comment>Instructor id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:48:31 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@name" sortOrder="3" type="varchar">
+						<Comment>Instructor Name.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:48:31 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@password" sortOrder="8" type="varchar">
+						<Comment>Instructor  password.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:48:31 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@salary" sortOrder="5" type="float">
+						<Comment>Instructor  salary.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:48:31 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@userID" sortOrder="6" type="int">
+						<Comment>Instructor Login id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:50:32 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@username" sortOrder="9" type="varchar">
+						<Comment>Instructor  login user name.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded 9 attributes" />
+					<Record When="2021-02-06T21:48:31" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@degree comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@deptID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@InsID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@name comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@password comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@salary comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@userID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@username comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateInstructor_Action" Created="2021-02-06T17:03:55" CommentModified="2021-02-06T17:03:55" CommentModifiedBy="">
+				<Comment>SP calls UpdateInstructor (Ehancement).</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@degree" sortOrder="3" type="varchar" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@deptID" sortOrder="6" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@InsID" sortOrder="1" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@name" sortOrder="2" type="varchar" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@password" sortOrder="7" type="varchar" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@salary" sortOrder="4" type="float" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@userID" sortOrder="5" type="int" />
-					<Attribute created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@username" sortOrder="8" type="varchar" />
+					<Attribute commentModified="2/6/2021 9:49:54 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@degree" sortOrder="3" type="varchar">
+						<Comment>Instructor degree.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:50:23 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@deptID" sortOrder="6" type="int">
+						<Comment>Instructor department id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:40:14 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@InsID" sortOrder="1" type="int">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:49:54 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@name" sortOrder="2" type="varchar">
+						<Comment>Instructor Name.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:50:23 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@password" sortOrder="7" type="varchar">
+						<Comment>Instructor password.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:49:54 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@salary" sortOrder="4" type="float">
+						<Comment>Instructor salary.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:50:23 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@userID" sortOrder="5" type="int">
+						<Comment>Instructor Login id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:50:37 PM" created="2021-02-06T17:03:55" modified="2021-02-06T17:03:55" name="@username" sortOrder="8" type="varchar">
+						<Comment>Instructor  login user name.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded 8 attributes" />
+					<Record When="2021-02-06T21:49:13" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@degree comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@deptID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@InsID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@name comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@password comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@salary comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@userID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@username comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.updateStudCourse" Created="2021-02-06T17:03:55" CommentModified="2021-02-06T17:03:55" CommentModifiedBy="">
+				<Comment>SP to Update Student Course table.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@courseId" sortOrder="3" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@grade" sortOrder="4" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@status" sortOrder="5" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentId" sortOrder="2" type="int" />
+					<Attribute commentModified="2/6/2021 9:52:21 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@courseId" sortOrder="3" type="int">
+						<Comment>Course id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:40:11 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:52:21 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@grade" sortOrder="4" type="int">
+						<Comment>Student Grade in this Course.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:52:21 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@status" sortOrder="5" type="int">
+						<Comment>Student status in course Exam.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:52:21 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentId" sortOrder="2" type="int">
+						<Comment>Student id.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:55" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded 5 attributes" />
+					<Record When="2021-02-06T21:52:21" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@courseId comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@grade comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@status comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@studentId comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateStudent" Created="2021-02-06T17:03:56" CommentModified="2021-02-06T17:03:56" CommentModifiedBy="">
+				<Comment>SP to Update Student that takes student date and update it.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@address" sortOrder="5" type="varchar" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@age" sortOrder="4" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@deptID" sortOrder="6" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@name" sortOrder="3" type="varchar" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@password" sortOrder="7" type="varchar" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentID" sortOrder="2" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@username" sortOrder="8" type="varchar" />
+					<Attribute commentModified="2/6/2021 9:54:20 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@address" sortOrder="5" type="varchar">
+						<Comment>Student  Address.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:54:20 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@age" sortOrder="4" type="int">
+						<Comment>Student  Age.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:54:20 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@deptID" sortOrder="6" type="int">
+						<Comment>Student  Department id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:40:08 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:54:20 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@name" sortOrder="3" type="varchar">
+						<Comment>Student Name.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:54:20 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@password" sortOrder="7" type="varchar">
+						<Comment>Student  password.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:54:20 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentID" sortOrder="2" type="int">
+						<Comment>Student id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:56:02 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@username" sortOrder="8" type="varchar">
+						<Comment>Student  Login User id.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded 8 attributes" />
+					<Record When="2021-02-06T21:54:20" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@address comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@age comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@deptID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@name comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@password comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@studentID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@username comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateStudent_Action" Created="2021-02-06T17:03:56" CommentModified="2021-02-06T17:03:56" CommentModifiedBy="">
+				<Comment>SP calls UpdateStudent (Ehancement).</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@address" sortOrder="4" type="varchar" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@age" sortOrder="3" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@deptID" sortOrder="5" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@name" sortOrder="2" type="varchar" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@password" sortOrder="6" type="varchar" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentID" sortOrder="1" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@username" sortOrder="7" type="varchar" />
+					<Attribute commentModified="2/6/2021 9:55:32 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@address" sortOrder="4" type="varchar">
+						<Comment>Student address.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:55:32 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@age" sortOrder="3" type="int">
+						<Comment>Student age.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:55:42 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@deptID" sortOrder="5" type="int">
+						<Comment>Student  Department id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:55:32 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@name" sortOrder="2" type="varchar">
+						<Comment>Student Name.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:55:49 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@password" sortOrder="6" type="varchar">
+						<Comment>Student  password.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:40:05 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentID" sortOrder="1" type="int">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:55:58 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@username" sortOrder="7" type="varchar">
+						<Comment>Student  Login User id.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded 7 attributes" />
+					<Record When="2021-02-06T21:55:12" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@address comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@age comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@deptID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@name comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@password comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@studentID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@username comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.updateStudentAnswer" Created="2021-02-06T17:03:56" CommentModified="2021-02-06T17:03:56" CommentModifiedBy="">
+				<Comment>SP to update StudentAnswer that takes Student and Answers date to update.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@ExamId" sortOrder="5" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@questionId" sortOrder="4" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@StudentAnswer" sortOrder="2" type="nvarchar" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentId" sortOrder="3" type="int" />
+					<Attribute commentModified="2/6/2021 9:57:51 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@ExamId" sortOrder="5" type="int">
+						<Comment>Exam id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:40:01 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:57:51 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@questionId" sortOrder="4" type="int">
+						<Comment>Question id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:57:51 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@StudentAnswer" sortOrder="2" type="nvarchar">
+						<Comment>Student Answer.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:57:51 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@studentId" sortOrder="3" type="int">
+						<Comment>Student id.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded 5 attributes" />
+					<Record When="2021-02-06T21:57:51" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@ExamId comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@questionId comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@StudentAnswer comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@studentId comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateTopic" Created="2021-02-06T17:03:56" CommentModified="2021-02-06T17:03:56" CommentModifiedBy="">
+				<Comment>SP to Update Topic in course .</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@crsID" sortOrder="4" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@topicID" sortOrder="3" type="int" />
-					<Attribute created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@topicName" sortOrder="2" type="varchar" />
+					<Attribute commentModified="2/6/2021 9:58:47 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@crsID" sortOrder="4" type="int">
+						<Comment>course id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:39:58 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:58:47 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@topicID" sortOrder="3" type="int">
+						<Comment>Topic id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:58:47 PM" created="2021-02-06T17:03:56" modified="2021-02-06T17:03:56" name="@topicName" sortOrder="2" type="varchar">
+						<Comment>Topic Name.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded 4 attributes" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@crsID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@topicID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@topicName comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateUser" Created="2021-02-06T17:03:56" CommentModified="2021-02-06T17:03:56" CommentModifiedBy="">
+				<Comment>sp to  Update User into Datebase.</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@flag" sortOrder="1" type="bit" />
-					<Attribute created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@password" sortOrder="3" type="varchar" />
-					<Attribute created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@userID" sortOrder="4" type="int" />
-					<Attribute created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@username" sortOrder="2" type="varchar" />
+					<Attribute commentModified="2/6/2021 9:37:32 PM" created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@flag" sortOrder="1" type="bit">
+						<Comment>Indicator if the operartion done successfully its value will be 1, otherwise it will be 0.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:38:42 PM" created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@password" sortOrder="3" type="varchar">
+						<Comment>user password.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:38:42 PM" created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@userID" sortOrder="4" type="int">
+						<Comment>user id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:38:42 PM" created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@username" sortOrder="2" type="varchar">
+						<Comment>user name .</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:56" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:57" Who="User" Description="Loaded 4 attributes" />
+					<Record When="2021-02-06T21:38:42" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@flag comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@password comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@userID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@username comment changed" />
 				</History>
 			</Object>
 			<Object Name="dbo.UpdateUser_Action" Created="2021-02-06T17:03:57" CommentModified="2021-02-06T17:03:57" CommentModifiedBy="">
+				<Comment>SP calls UpDateUser (Ehancement).</Comment>
 				<Attributes>
-					<Attribute created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@password" sortOrder="2" type="varchar" />
-					<Attribute created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@userID" sortOrder="3" type="int" />
-					<Attribute created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@username" sortOrder="1" type="varchar" />
+					<Attribute commentModified="2/6/2021 9:39:39 PM" created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@password" sortOrder="2" type="varchar">
+						<Comment>User Password.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:39:39 PM" created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@userID" sortOrder="3" type="int">
+						<Comment>User id.</Comment>
+					</Attribute>
+					<Attribute commentModified="2/6/2021 9:39:39 PM" created="2021-02-06T17:03:57" modified="2021-02-06T17:03:57" name="@username" sortOrder="1" type="varchar">
+						<Comment>User Name.</Comment>
+					</Attribute>
 				</Attributes>
 				<History>
 					<Record When="2021-02-06T17:03:57" Who="User" Description="Loaded" />
 					<Record When="2021-02-06T17:03:57" Who="User" Description="Loaded 3 attributes" />
+					<Record When="2021-02-06T21:39:39" Who="aliaa" Description="Changed object comment" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@password comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@userID comment changed" />
+					<Record When="2021-02-06T21:58:47" Who="aliaa" Description="@username comment changed" />
 				</History>
 			</Object>
 		</Group>
