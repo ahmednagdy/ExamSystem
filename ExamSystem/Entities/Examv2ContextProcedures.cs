@@ -1893,7 +1893,7 @@ namespace ExamSystem.Entities
             return _;
         }
 
-        public async Task<reportExamStudentResult[]> reportExamStudentAsync(int? StuID, int? ExamID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public async Task<reportExamStudentResult[]> reportExamStudentAsync(int? ExamID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
             {
@@ -1904,12 +1904,7 @@ namespace ExamSystem.Entities
 
             var sqlParameters = new []
             {
-                new SqlParameter
-                {
-                    ParameterName = "StuID",
-                    Value = StuID ?? Convert.DBNull,
-                    SqlDbType = System.Data.SqlDbType.Int,
-                },
+                
                 new SqlParameter
                 {
                     ParameterName = "ExamID",
@@ -1918,7 +1913,7 @@ namespace ExamSystem.Entities
                 },
                 parameterreturnValue,
             };
-            var _ = await _context.SqlQueryAsync<reportExamStudentResult>("EXEC @returnValue = [dbo].[reportExamStudent] @StuID, @ExamID", sqlParameters, cancellationToken);
+            var _ = await _context.SqlQueryAsync<reportExamStudentResult>("EXEC @returnValue = [dbo].[reportExamStudent] @ExamID", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 
