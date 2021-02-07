@@ -36,18 +36,21 @@ namespace ExamSystem
         {
             ReportDataSource src = new ReportDataSource();
             report = new ReportViewer();
-            //SetReportParameters(5, 115);
             switch (reportIndex)
             {
                 case 0:
                     report.LocalReport.ReportPath = "rptStudentInfo.rdlc";
                     var data = await procs.reportStudentInfoAsync(firstParameter);
                     src = new ReportDataSource("stdInfo", data.ToList());
+                    var deptName = db.Department.SingleOrDefault(d=>d.DeptId==firstParameter).Name;
+                    report.LocalReport.SetParameters(new ReportParameter("deptName", deptName));
                     break;
                 case 1:
                     report.LocalReport.ReportPath = "rptStudentGrade.rdlc";
                     var data1 = await procs.reportStudentGradesAsync(firstParameter);
                     src = new ReportDataSource("stdGrades", data1.ToList());
+                    var stdName = db.Student.SingleOrDefault(i => i.StudentId == firstParameter).Name;
+                    report.LocalReport.SetParameters(new ReportParameter("stdName", stdName));
                     break;
                 case 2:
                     report.LocalReport.ReportPath = "rptInstructorCourses.rdlc";
@@ -68,15 +71,15 @@ namespace ExamSystem
                     report.LocalReport.ReportPath = "rptExamQuestions.rdlc";
                     var data4 = await procs.reportExamQuestionsAsync(firstParameter);
                     src = new ReportDataSource("examQ", data4.ToList());
-                    var stdName = db.Student.SingleOrDefault(s => s.StudentId == db.StudentAnswers.First(t => t.ExamId == firstParameter).StudentId).Name;
-                    report.LocalReport.SetParameters(new[] { new ReportParameter("examID", firstParameter.ToString()), new ReportParameter("stdName", stdName) });
+                    var stdName2 = db.Student.SingleOrDefault(s => s.StudentId == db.StudentAnswers.First(t => t.ExamId == firstParameter).StudentId).Name;
+                    report.LocalReport.SetParameters(new[] { new ReportParameter("examID", firstParameter.ToString()), new ReportParameter("stdName", stdName2) });
                     break;
                 case 5:
                     report.LocalReport.ReportPath = "rptExamAnswers.rdlc";
                     var data5 = await procs.reportExamStudentAsync(firstParameter);
                     src = new ReportDataSource("stdAnswers", data5.ToList());
-                    stdName = db.Student.SingleOrDefault(s => s.StudentId == db.StudentAnswers.First(t => t.ExamId == firstParameter).StudentId).Name;
-                    report.LocalReport.SetParameters(new[] { new ReportParameter("examID", firstParameter.ToString()), new ReportParameter("stdName", stdName) });
+                    var stdName3 = db.Student.SingleOrDefault(s => s.StudentId == db.StudentAnswers.First(t => t.ExamId == firstParameter).StudentId).Name;
+                    report.LocalReport.SetParameters(new[] { new ReportParameter("examID", firstParameter.ToString()), new ReportParameter("stdName", stdName3) });
                     break;
                 default:
                     break;

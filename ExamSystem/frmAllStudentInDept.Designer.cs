@@ -79,6 +79,7 @@ namespace ExamSystem
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAllStudentInDept";
             this.Text = "frmAllStudentInDept";
+            this.Load += new System.EventHandler(this.frmAllStudentInDept_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -14,5 +14,10 @@ namespace ExamSystem
         {
             InitializeComponent();
         }
+
+        private void frmAllStudentInDept_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

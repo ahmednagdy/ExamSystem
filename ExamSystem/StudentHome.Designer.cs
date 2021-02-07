@@ -54,7 +54,7 @@ namespace ExamSystem
             this.btnStartExam.Name = "btnStartExam";
             this.btnStartExam.Size = new System.Drawing.Size(145, 55);
             this.btnStartExam.TabIndex = 1;
-            this.btnStartExam.Text = "Sart Exam";
+            this.btnStartExam.Text = "Start Exam";
             this.btnStartExam.UseVisualStyleBackColor = false;
             this.btnStartExam.Click += new System.EventHandler(this.btnStartExam_Click);
             // 
@@ -159,7 +159,7 @@ namespace ExamSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(578, 389);
+            this.ClientSize = new System.Drawing.Size(578, 336);
             this.Controls.Add(this.comboxCourses);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
